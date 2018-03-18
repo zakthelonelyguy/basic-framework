@@ -1,0 +1,30 @@
+div.alert {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid $alert-background;
+    border-left: 4px solid $alert-background;
+    border-radius: 5px;
+    background: $alert-background;
+    color: $alert-forground;
+    margin: 15px;
+
+    &:hover {
+        background: darken($alert-background, 5%);
+    }
+
+    &.red {
+        @include add-alert-color ($red);
+    }
+
+    &.green {
+        @include add-alert-color ($green);
+    }
+
+    &.blue {
+        @include add-alert-color ($blue);
+    }
+
+    &.orange {
+        @include add-alert-color ($orange);
+    }
+}

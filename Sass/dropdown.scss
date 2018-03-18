@@ -1,0 +1,23 @@
+div.dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    &:hover {
+        .dropdown-content {
+            display: block;
+            border: 1px solid #bbb;
+            padding: 10px;
+            padding-bottom: 11px;
+            background: #f2f2f2;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    }
+}

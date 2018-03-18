@@ -1,0 +1,51 @@
+.input {
+    padding: 8px;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.250s ease-out;
+    min-width: 200px;
+
+    &:focus {
+        border-color: lighten($blue, 10%);
+    }
+}
+
+.textarea{
+    padding: 8px;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.250s ease-out;
+    min-width: 200px;
+
+    &:focus {
+        border-color: lighten($blue, 10%);
+    }
+    
+    &.no-resizable {
+        resize: none;
+    }
+    
+    &.vertical-resizable {
+        resize: vertical;
+    }
+    
+    &.horizontal-resizable {
+        resize: horizontal;
+    }
+}
+
+.form {
+    padding: 10px;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    width: inherit;
+
+    * {
+        margin-bottom: 8px;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}

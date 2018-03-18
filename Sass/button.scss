@@ -1,0 +1,94 @@
+.button {
+    padding: 10px;
+    font-family: $default-button;
+    font-size: 18px;
+    color: $button-color;
+    background: $button-background;
+    border: 1px solid darken($button-background, 25%);
+    border-radius: 4px;
+    margin-bottom: 2px;
+    font-style: normal;
+    user-select: none; /* Standard */
+    &.size-lg {
+        @include add-button-size(14px);
+    }
+
+    &.size-sm {
+        @include add-button-size(8px);
+    }
+
+    &.size-xs {
+        @include add-button-size(6px);
+    }
+
+    &:hover {
+        background: darken($button-background, 15%);
+        cursor: pointer;
+    }
+
+    &:active {
+        border: 1px solid darken($button-background, 20%);
+    }
+
+    &.bold {
+        /*font-family: $button-bold;*/
+        font-weight: bold;
+    }
+
+    &.italic {
+        /*font-family: $button-italic;*/
+        font-style: italic;
+    }
+
+    &.bold-italic {
+        font-family: $button-bold-italic;
+    }
+
+    &.dark {
+        @include add-button-color(#353535);
+    }
+
+    &.light {
+        @include add-button-color(#dddddd, #191919);
+    }
+
+    &.red {
+        @include add-button-color($red);
+    }
+
+    &.green {
+        @include add-button-color(darken($green, 5%));
+    }
+
+    &.blue {
+        @include add-button-color($blue);
+    }
+
+    &.orange {
+        @include add-button-color($orange);
+    }
+}
+
+div.button-group {
+    .button {
+        float: left;
+
+        &:not(:first-child) {
+            border-left: none;
+        }
+
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+
+        &:first-child {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}

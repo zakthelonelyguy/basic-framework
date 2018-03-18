@@ -1,0 +1,52 @@
+ul.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ddd;
+    
+    .dropdown {
+        overflow: visible;
+        * {
+            overflow: visible;
+        }
+    }
+    
+    font-family: $default-font;
+    
+    border-bottom: 1px solid darken(#ddd, 15%);
+    
+    li {
+        float: left;
+        
+        * {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+            &:hover{
+                background-color: darken(#ddd, 10%);
+            }
+        }
+    }
+    
+    .active {
+        background-color: $blue;
+        *,
+        a:visited {
+            color: #ddd;
+        }
+    }
+    
+    .align-right {
+        float: right;
+    }
+}

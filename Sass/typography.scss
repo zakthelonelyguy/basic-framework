@@ -1,0 +1,133 @@
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-family: $default-font;
+    color: $text-color;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.italic {
+    font-family: $default-italic;
+}
+
+.bold {
+    font-family: $default-bold;
+}
+
+.bold.italic {
+    font-family: $default-bold-italic
+}
+
+a:not(.no-link-effect) {
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+    
+    &:not(.no-link-effect):not(.button):visited {
+        color: $visited-link-color;
+        
+        &:hover {
+            color: darken($visited-link-color, 25%);
+        }
+    }
+    
+    &:not(.no-link-effect):not(.button):not(:visited):hover {
+        color: darken($link-color, 25%);
+    }
+}
+
+::selection {
+    color: #fff;
+    background: #F0A100;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.content {
+    margin: 0;
+    margin-left: $content-margin;
+    
+    margin-bottom: 55px;
+    margin-top: 55px;
+    
+    &.margin-right {
+        margin-right: $content-margin;
+    }
+    
+    &.large-margin {
+        margin-left: $content-large-margin;
+        
+        &.margin-right {
+            margin-right: $content-large-margin;
+        }
+    }
+}
+
+.li {
+    padding: 5px;
+}
+
+.html {
+    margin: 0;
+}
+
+.align-right {
+    float: right;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+code.code {
+    padding: 10px;
+    background: #ccc;
+    color: #333;
+    font-family: $code-font;
+    border: 1px solid #bbb;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.clearfix {
+    overflow: auto;
+}
