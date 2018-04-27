@@ -10,6 +10,10 @@
     font-style: normal;
     user-select: none; /* Standard */
     &.size-lg {
+        @include add-button-size(12px);
+    }
+
+    &.size-xl {
         @include add-button-size(14px);
     }
 
@@ -49,7 +53,7 @@
     }
 
     &.light {
-        @include add-button-color(#dddddd, #191919);
+        @include add-button-color(#efefef, #191919);
     }
 
     &.red {
@@ -62,6 +66,10 @@
 
     &.blue {
         @include add-button-color($blue);
+    }
+
+    &.dark-blue {
+        @include add-button-color($dark-blue);
     }
 
     &.orange {

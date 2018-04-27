@@ -12,6 +12,11 @@ label {
     font-weight: normal;
 }
 
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 h1,
 h2,
 h3,
@@ -119,13 +124,20 @@ hr {
 
 code.code {
     padding: 10px;
-    background: #ccc;
+    background: #dedede;
     color: #333;
     font-family: $code-font;
     border: 1px solid #bbb;
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
+}
+
+span.small-code {
+    padding: 2px;
+    background: #dedede;
+    color: #333;
+    font-family: $code-font;
 }
 
 .clearfix {

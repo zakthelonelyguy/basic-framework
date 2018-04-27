@@ -24,6 +24,10 @@ div.alert {
         @include add-alert-color ($blue);
     }
 
+    &.dark-blue {
+        @include add-alert-color ($dark-blue);
+    }
+
     &.orange {
         @include add-alert-color ($orange);
     }

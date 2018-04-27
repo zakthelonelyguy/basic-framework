@@ -9,35 +9,68 @@ ul.navbar {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #ddd;
-    
+    background-color: #fff;
+
+    &.light {
+        @include add-navbar-color();
+    }
+
+    &.dark {
+        @include add-navbar-color(#353535, darken(#353535, 15%), #dedede, #efefef);
+    }
+
+    &.red {
+        @include add-navbar-color($red, darken($red, 15%), darken($red, 10%), #efefef);
+    }
+
+    &.green {
+        @include add-navbar-color($green, darken($green, 15%), darken($green, 10%), #efefef);
+    }
+
+    &.blue {
+        @include add-navbar-color($blue, darken($blue, 15%), darken($blue, 10%), #efefef);
+    }
+
+    &.orange {
+        @include add-navbar-color($orange, darken($orange, 15%), darken($orange, 10%), #efefef);
+    }
+
+    &.dark-blue {
+        @include add-navbar-color($dark-blue, darken($dark-blue, 15%), darken($dark-blue, 10%), #efefef);
+    }
+
     .dropdown {
         overflow: visible;
+
         * {
             overflow: visible;
         }
     }
-    
+
     font-family: $default-font;
-    
-    border-bottom: 1px solid darken(#ddd, 15%);
-    
+    /*border-bottom: 1px solid darken(#ddd, 15%);*/
     li {
         float: left;
-        
+
         * {
             display: block;
-            color: #333;
+            /*color: #333;*/
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            
+            /*
             &:hover{
                 background-color: darken(#ddd, 10%);
-            }
+            }*/
+        }
+
+        img {
+            padding: 0;
+            margin: 0;
+            width: 16px;
         }
     }
-    
+    /*
     .active {
         background-color: $blue;
         *,
@@ -45,7 +78,7 @@ ul.navbar {
             color: #ddd;
         }
     }
-    
+    */
     .align-right {
         float: right;
     }
